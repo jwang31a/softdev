@@ -1,5 +1,5 @@
 # JUN HONG WANG
 
-## softdev
+## workshop
 
 ### SoftDev 2022-2023
