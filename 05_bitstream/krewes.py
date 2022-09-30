@@ -3,14 +3,20 @@ Matthew Yee, Jun Hong Wang
 SoftDev pd7
 k05
 2022-09-28
-Time Spent:
+Time Spent: 1.8 hrs
 
 DISCO:
+We learned how to add elements to an array using array and .append
+Learned how to add keys to a dictionary
+open("filename") creates a file object that can be stored, and file.read() will convert that into a string
 QCC:
+Why doesn't numpy exist?
+When we tried to use a function from numpy, it wouldn't work because numpy was missing, even though we imported it. 
 OPS SUMMARY:
 """
 
 import random
+import array
 
 #opens krewes.txt and makes a file
 file = open("krewes.txt")
@@ -26,11 +32,20 @@ def translate():
     #for loop for indices
     for n in range(len(src)):
         substring = ""
+        info = []
         #checks against @@@ in case someone has @ in their name
-        if src[n:n + 3] == "@@@":
+        if src[n:n + 3] == "@@@" or n == len(src) - 1:
             substring = src[prev_ind:n]
-            helper(substring)
+            #calls helper function to return all the information related to a person
+            info = helper(substring)
+            #searches for existing keys matching one from current person
+            if search(list(krewes), info[0]):
+                krewes[info[0]].append([info[0], info[1], info[2]])
+            #creating a new key if key doesn't exist
+            else:
+                krewes[info[0]] = [ [ info[0], info[1], info[2] ] ]
             prev_ind = n + 3
+    return krewes
 
 #copy paste pretty much from translate, but instead of filtering for @, we filter for $
 def helper(substring):
@@ -61,12 +76,19 @@ def helper(substring):
 def search(l, key):
     for n in l:
         if key == n:
-            
+            return True
+    return False
     #returns true or false
-        
+
+#our function for randomly choosing devo and duckie
 def random_devo():
     rand_key = random.choice(list(krewes.keys()))
     l = len(krewes[rand_key])
+    #test to make sure it got devos and duckies from different periods
+    #print(rand_key + "\n")
     return krewes[rand_key][random.randrange(0,l,1)]
 
-#print(random_devo())
+#main function for running code
+def main():
+    translate()
+    print(random_devo())
