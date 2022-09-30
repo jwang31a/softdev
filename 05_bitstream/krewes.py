@@ -13,6 +13,14 @@ QCC:
 Why doesn't numpy exist?
 When we tried to use a function from numpy, it wouldn't work because numpy was missing, even though we imported it. 
 OPS SUMMARY:
+1) open file, read file to turn into string
+2) translate string into dictionary:
+    iterate through the string, until hit @ or end of string
+    use substring, then cut it up between $
+    turn the information inside the substring into an array containing the period, name, and dname
+    check if key exists, if not, make a new key and add that array to the array for that dict
+    if it does, add array to value
+3) use random_devo() to randomly select devo + duckie + period
 """
 
 import random
