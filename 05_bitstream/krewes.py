@@ -1,10 +1,9 @@
 """
 Matthew Yee, Jun Hong Wang
 SoftDev pd7
-k05
+k05 -- text file to dictionary
 2022-09-28
 Time Spent: 1.8 hrs
-
 DISCO:
 We learned how to add elements to an array using array and .append
 Learned how to add keys to a dictionary
