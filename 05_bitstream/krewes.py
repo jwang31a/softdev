@@ -63,7 +63,7 @@ def helper(substring):
     name = ""
     dname = ""
     #for loop for indices
-    for n in range(len(src)):
+    for n in range(len(substring)):
         #checks for period
         if prev_ind == 0 and substring[n:n + 3] == "$$$":
             key = substring[prev_ind : n]
@@ -74,7 +74,7 @@ def helper(substring):
             prev_ind = n + 3
         #duckie name
         else:
-            dname = substring[prev_ind : n]
+            dname = substring[prev_ind : n + 1]
     #temp return
     return [key, name, dname]
 
