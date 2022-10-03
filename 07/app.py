@@ -6,7 +6,7 @@ app = Flask(__name__) # Q0: Where have you seen similar syntax in other langs?
 
 @app.route("/") # Q1: What points of reference do you have for meaning of '/'?
 def hello_world():
-    print(__name__) # Q2: Where will this print to? Q3: What will it print?
+    #print(__name__) # Q2: Where will this print to? Q3: What will it print?
     return "No hablo queso!"  # Q4: Will this appear anywhere? How u know?
 
 app.run()  # Q5: Where have you seen similar constructs in other languages?
@@ -14,6 +14,8 @@ app.run()  # Q5: Where have you seen similar constructs in other languages?
 
 '''
 DISCO:
+* We can see what's returned in the webpage itself, as plain text.
+* There's no value for name, so the name doesn't show. 
 
 QCC:
 0. Looks like a constructor from object oriented programming, like Java from last year.
