@@ -1,10 +1,9 @@
 """
-Matthew Yee, Jun Hong Wang
+The Hacking Hornets: Matthew Yee, Jun Hong Wang
 SoftDev pd7
 k06 -- StI/O: divine your destiny!
 2022-10-02
 Time Spent: 1.3 hrs
-
 DISCO:
 * lists and arrays are different in Python, to use arrays, we have to import the module
 * use random.uniform(lower bound, upper bound) instead of randrange if we want to get floats/non-ints
