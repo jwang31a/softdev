@@ -66,6 +66,11 @@ def authenticate():
     print(request.args)
     print("***DIAG: request.args['username']  ***")
     print(request.args['username'])
+    #the username the user submits can actually be used, and we can serve different pages based on response
+    if request.args['username'] == 'foo':
+        return 'access granted'
+    else:
+        return 'no cookies'
     print("***DIAG: request.headers ***")
     print(request.headers)
     return "Waaaa hooo HAAAH"  #response to a form submission

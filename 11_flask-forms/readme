@@ -1,0 +1,20 @@
+CDN: Jeremy Kwok, Brianna Toe, Jun Hong
+SoftDev
+k11 -- forms
+2022-10-16
+time spent:
+
+DISCO:
+even though request is a module, it seems that we can still print it
+request also has several parameters, like .args or .headers
+.args seems to be an array or maybe even a dictionary?
+  when we request username, it prints the value associated with it, which is the user submitted one
+we also discovered that we can show different information on the webpage based on what the user submits as the username
+the methods array can be put into app.route() as a parameter
+we think get means showing information to the user, so getting from the backend?
+the submitted username will show up in the url
+
+QCC:
+when we uncommented out the print(request.args['username']) in the disp_loginpage() function, we got an error
+  we think this is because the username doesn't exist yet since the user didn't submit it through the form
+we're not sure what post means, but we think it has something to do with sending information back to the server based on what we think get does
