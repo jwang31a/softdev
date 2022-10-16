@@ -28,7 +28,8 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-@app.route("/") , methods=['GET', 'POST'])
+#we can move the methods = ['GET', 'POST'] into the app.route() as another parameter
+@app.route("/", methods=['GET', 'POST']) 
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -43,7 +44,8 @@ def disp_loginpage():
     #is request.args an array? based on [] usage in print statement
     print("***DIAG: request.args['username']  ***")
     #prints the type then submitted username
-    print(request.args['username'])
+    #for some reason this breaks the entire page, maybe because the username isn't submitted yet?
+    #print(request.args['username'])
     print("***DIAG: request.headers ***")
     #not sure
     print(request.headers)
@@ -53,7 +55,7 @@ def disp_loginpage():
 
 #confusing route link, still has old route even if both are changed?
 #but works if both are the same, if not, uses old working one
-@app.route("/asdf") # , methods=['GET', 'POST'])
+@app.route("/asdf", methods=['GET', 'POST']) 
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
