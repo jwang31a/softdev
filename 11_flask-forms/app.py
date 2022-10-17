@@ -49,6 +49,8 @@ def disp_loginpage():
     print("***DIAG: request.headers ***")
     #not sure
     print(request.headers)
+    print("request.forms")
+    print(request.forms)
     #all are print statements, so should show up in the terminal
     #loads another page?
     return render_template( 'login.html' )
@@ -65,14 +67,14 @@ def authenticate():
     print("***DIAG: request.args ***")
     print(request.args)
     print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    #if post request, then we can't print out submitted username
+    #print(request.args['username'])
     #the username the user submits can actually be used, and we can serve different pages based on response
-    if request.args['username'] == 'foo':
-        return 'access granted'
-    else:
-        return 'no cookies'
     print("***DIAG: request.headers ***")
     print(request.headers)
+    print("request.forms")
+    #request.form is the counterpart to request.arg but for post instead of get, also a dictionary
+    print(request.form['username'])
     return "Waaaa hooo HAAAH"  #response to a form submission
 
 
