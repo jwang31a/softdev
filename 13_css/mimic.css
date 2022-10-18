@@ -1,10 +1,27 @@
 body {
-	background-color: gray;
+	background-color: 606060;
 }
 
 h1 {
 	color: white;
-	background-color: lightgray;
+	background-color: #A5A5A5;
 	font-family: arial;
 	text-align: center;
+}
+
+td {
+	font-family: arial;
+	border-style: hidden;
+}
+
+table {
+	background-color: gray;
+}
+
+.copyright {
+	color: #A5A5A5;
+	background-color: #505050;
+	text-align: right;
+	font-family: arial;
+	font-size: 12px;
 }
