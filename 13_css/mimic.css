@@ -1,27 +1,48 @@
+/* this is how you comment in a css file */
 body {
-	background-color: 606060;
+	background-color: rgb(102,102,102); /*colors could be rgb(), hexadecimal, or just a name of a color*/
+	margin: 1em; /* for length, you can use %, px, or em*/
+	margin-left: 10px;
 }
 
 h1 {
 	color: white;
-	background-color: #A5A5A5;
+	background-color: #bebebe;
 	font-family: arial;
 	text-align: center;
+	font-size: 70px;
+	margin: auto; /*this makes sure there is no gap betwwen the heading and the table*/
 }
 
-td {
+.left{
+	float: left; /* This wraps the text to the left */
+	width: 25%;
 	font-family: arial;
-	border-style: hidden;
+	font-size: 30px;
+	padding-left: 25px;
 }
 
-table {
-	background-color: gray;
+.text{
+	color: lightgray;
 }
 
-.copyright {
-	color: #A5A5A5;
-	background-color: #505050;
+.right{
+	width:73.6%;
+	float: left;
+	font-family: arial;
+	font-size: 35px;
+}
+
+.table{
+	height: 75%;
+	background-color: #767676;
+}
+
+.foot {
+	font-family: arial;
+	font-size: 35px;
 	text-align: right;
-	font-family: arial;
-	font-size: 12px;
+	background-color: #565656;
+	padding: 20px; 
+	color: #757575;
 }
