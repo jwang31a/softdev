@@ -1,0 +1,19 @@
+Spooky Ghosts: Jun Hong Wang, James Yu, Thomas Zhang
+softdev pd7
+p00--design doc
+2022-10-27
+
+Python file will contain code for running the app, rendering a template that will be the main page. 
+That rendered html file will display text, with a button to change to another page that displays an editable version of that text (using contenteditable attribute?). 
+ - if user wants to update the page, then the text in the html file will be updated directly?
+Backend storage will be sqlite: 
+ - 2 types of accounts (for now hard coded), admin and user
+  - admin can edit, user can only view (for now)
+ - not for file storage (like the displayed text)
+ 
+Sitemap: 
+ - main page that displays all the text/information (maybe with a search feature)
+  - login with a form requesting username and password on the side
+ - edit page that displays editable text (only admin can edit)
+
+  - if login succeeds, then admin will be able to access the edit page
