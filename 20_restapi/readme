@@ -1,0 +1,7 @@
+DISCO:
+When we request the file by getting it from the api, it's not in a dictionary format yet. 
+To turn it into a dictionary, we have to use the json() function. 
+ 
+QCC:
+It seems that there is a json module in python. 
+There are also many other api on the nasa page, containing other types of information. 
