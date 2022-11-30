@@ -7,12 +7,113 @@
   <body>
     <div class="row" style="height: 15vh;">
       <div class="columns ">
-         <p class="h1 text-center">LimeTricycles - Foundations Framework</p>	
+         <p class="h1 text-center">LimeTricycles - Foundations Framework</p>
          <p class="h2 subheader text-center">Presented by Ravindra Mangar and Jun Hong Wang</p>
-      </div>      
+      </div>
     </div>
-    <div class="row" style="height: 20vh;">
+    <!-- Interesting menu stuff -->
+    <div>
+      <div>
+        <ul class="menu expanded">
+          <li><a href="#">Menu 1</a></li>
+          <li><a href="#">Menu 2</a></li>
+        </ul>
+      </div>
+      <br>
+      <div>
+        <ul class="menu expanded align-center">
+          <ul class="nested vertical menu">
+            <li><a href="#">Menu 1</a>
+              <li>Submenu 1</li>
+              <li>Submenu 2</li>
+              <li>Submenu 3</li>
+            </li>
+          </ul>
+          <ul class="nested vertical menu">
+            <li><a href="#">Menu 2</a>
+              <li>Submenu 1</li>
+              <li>Submenu 2</li>
+              <li>Submenu 3</li>
+            </li>
+          </ul>
+          <ul class="nested vertical menu">
+            <li><a href="#">Menu 3</a>
+              <li>Submenu 1</li>
+              <li>Submenu 2</li>
+              <li>Submenu 3</li>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <!-- blockquotes -->
+    <div>
+      <br>
+      <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at.
+        <cite>Anonymous</cite>
+      </blockquote>
+    </div>
+    <!-- videos (would be interesting, but it doesn't seem to work) -->
+    <!-- <div class="responsive-embed">
+      <iframe width="320" height="180" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" frameborder="0" allowfullscreen></iframe>
+    </div> -->
+    <div>
+      <div class="secondary progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+        <div class="progress-meter" style="width: 25%"><span class="progress-meter-text">fake progress bar</span></div>
+      </div>
 
+      <div class="success progress">
+        <div class="progress-meter" style="width: 50%"></div>
+      </div>
+
+      <div class="warning progress">
+        <div class="progress-meter" style="width: 50%"></div>
+      </div>
+
+      <div class="alert progress">
+        <div class="progress-meter" style="width: 75%"></div>
+      </div>
+    </div>
+    <!-- closeable alerts (however, it looks like it might not be closeable?) -->
+    <div>
+      <div class="callout alert" data-closable>
+        <h5>Important!</h5>
+        <p>Your computer has virus</p>
+        <p>call (123)-456-7890 to resolve this problem</p>
+        <p>I'm using the default <code>data-closable</code> parameters, and simply fade out.</p>
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="callout success" data-closable="slide-out-right">
+        <h5>Success!</h5>
+        <p>successfully downloaded malware</p>
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <!-- form stuff -->
+    <div>
+      <form>
+        <label>Multiple Select Menu
+          <select>
+            <option value="lil bobby tables">lil bobby tables</option>
+            <option value="Lorem">Lorem</option>
+            <option value="ipsum">ipsum</option>
+            <option value="dolor">dolor</option>
+          </select>
+        </label>
+      </form>
+      <div class="grid-x grid-padding-x">
+        <fieldset class="large-5 cell">
+          <legend>Choose Your Favorite</legend>
+          <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Red</label>
+          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+          <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+        </fieldset>
+      </div>
     </div>
   </body>
 </html>
