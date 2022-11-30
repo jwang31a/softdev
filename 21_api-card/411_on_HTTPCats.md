@@ -24,9 +24,9 @@ For example, 404 (not found) would show one image of a cat
 - Very easy to use, doesn't require key, only changing url
 - Their repo for this api is actually on github at [HTTPCats](https://github.com/httpcats/http.cat)
 ## The Bad:
-- Cats
+- There's not really much of a use to this other than as a gimmick to show images of cats when errors occur. 
 ## The Ugly:
-- Also cats
+- It's a very simple API, so there's not much ugly about it. 
 
 
 **Location:** https://http.cat/?ref=apilist.fun
@@ -37,4 +37,4 @@ Accurate as of (last update):    2022-11-23
 
 Contributors:
 
-Jun Hong Wang  
+Jun Hong Wang, pd7  
