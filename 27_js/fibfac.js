@@ -1,5 +1,5 @@
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
+// Team Greatness-Portending Team :: Gabriel Thompson, Jun Hong Wang
+// SoftDev pd8
 // K27 -- Basic functions in JavaScript
 // 2023-04-04t
 // --------------------------------------------------

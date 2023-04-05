@@ -1,10 +1,10 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname fibfac) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
-;Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-;SoftDev pd0
+;Team Greatness-Portending Team :: Gabriel Thompson, Jun Hong Wang
+;SoftDev pd8
 ;K27 -- Basic functions in JavaScript
-;2023-04-03t
+;2023-04-04t
 
 ;Scheme Antecedents for JS work
 
