@@ -1,21 +1,25 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-SoftDev pd0
+Team Greatness-Portending Team :: Gabriel Thompson, Jun Hong Wang
+SoftDev pd8
 K27 -- Basic functions in JavaScript
-2023-04-03t
+2023-04-04t
 
 DISCO
 -----------------------------------------------------------------
-* Ooooh, ___
-* Aaah-haa!  ____
-* ...
+* functions can be variables
+* function function is like scheme lambda
+* JS function declaration is like Scheme, but body of code looks more like C-family.
+* Function is a variable, yet is treated as a function, with arguments.
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why...?
-* Huh?
-* Teh whah now?
-* ...
+* JS is like Scheme, but JS allows iteration, Scheme only allows iteration, but if JS is like web browser Scheme, why is iteration allowed?
+* Fib algo is extremely inefficient, 2^n time, is there a way to optimize it in Scheme? (since Scheme is recursive only)
+* Functional programming isn't all that popular, Scheme is uncommonly used language, so why would developers of the internet decide to use this paradigm?
+* Is there if else in Scheme instead of nested ifs?
+* What is stored inside the function variable? How is it stored? (what does the stored stuff look like?)
+* JS allows other paradigms, so were they an afterthought?
+* What was the original state of JS? Was it totally functional, or did it have bits of C-family syntax added as well?
 =================================================================
 
 
