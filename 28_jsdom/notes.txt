@@ -1,0 +1,14 @@
+Team Greatness-Portending Team :: Jun Hong Wang, Gabriel Thompson 
+SoftDev pd8
+K28 -- Getting more comfortable with the dev console and the DOM
+2023-04-05w
+
+DISCO: 
+* functions can also be created using const and arrow syntax
+* function() can take 0 arguments, or more, doesn't need to be only one argument
+* JS seems to have functions for interacting with html
+
+QCC: 
+* are there preimplemented functions for JS interacting with CSS?
+* the functions that change the appearance of the page don't change the actual file, since after reloading, the page reverts to its original look
+* functions, objects, primitives are all declared using var
