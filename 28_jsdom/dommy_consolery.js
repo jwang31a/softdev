@@ -151,7 +151,30 @@ console.log(bobby(3,7));
 console.log(bobby(1,1));
 console.log(bobby(5,4));
 */
+//hardcoded functions
+var fact6 = function() {
+  console.log(fact(6));
+  addItem("6! is " + fact(6));
+}
+
+var fib18 = function() {
+  console.log(fib(18));
+  addItem("the 18th fib num is " + fib(18));
+}
+
+var gcd_30_160 = function() {
+  console.log(gcd(30,160));
+  addItem("the gcd of 30 and 180 is " + gcd(30,160));
+}
 
 //hardcoded buttons
 var fact5 = document.getElementById("5!");
-fact5.addEventListener('click', console.log(fact(5)));
+//fact5.addEventListener('click', red);
+fact5.addEventListener('click', fact6);
+// fact5.addEventListener('click', addItem("6! is " + fact(6)));
+
+var fib_18 = document.getElementById("fib(18)");
+fib_18.addEventListener('click', fib18);
+
+var gcd30_160 = document.getElementById("gcd(30,160)");
+gcd30_160.addEventListener('click', gcd_30_160);
