@@ -84,6 +84,7 @@ var fib = function(n) {
   }
 }
 // GCD
+//brute force
 var gcd = function(a, b) {
   var c = 0;
   if (a == b) {
@@ -104,14 +105,27 @@ var gcd = function(a, b) {
     return c;
   }
 }
+//recursive
+var gcd2 = function(a, b) {
+  if (a % b === 0) {
+    return b;
+  }
+  return gcd2(b, a % b);
+}
+//recursive gcd test calls
+console.log(gcd2(18,324));
+console.log(gcd2(36,20));
+console.log(gcd2(5,17));
 
 //test calls
+/*
 console.log(fact(5));
 console.log(fib(5));
 console.log(gcd(5,5));
 console.log(gcd(20,24));
 console.log(gcd(24,20));
 console.log(gcd(3,9));
+*/
 
 //thing to make function call on page load
 var load = function() {
@@ -132,6 +146,12 @@ const bobby = (x, y) => {
 };
 
 //more test calls
+/*
 console.log(bobby(3,7));
 console.log(bobby(1,1));
 console.log(bobby(5,4));
+*/
+
+//hardcoded buttons
+var fact5 = document.getElementById("5!");
+fact5.addEventListener('click', console.log(fact(5)));

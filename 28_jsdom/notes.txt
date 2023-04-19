@@ -7,8 +7,15 @@ DISCO:
 * functions can also be created using const and arrow syntax
 * function() can take 0 arguments, or more, doesn't need to be only one argument
 * JS seems to have functions for interacting with html
+* DOM is tree representation of HTML file and its elements
+* .getElementById() doesn't return list, it returns an object
+* just typing variable name will return the content of variable
+* typeof will return type of variable
 
 QCC: 
 * are there preimplemented functions for JS interacting with CSS?
 * the functions that change the appearance of the page don't change the actual file, since after reloading, the page reverts to its original look
 * functions, objects, primitives are all declared using var
+* element names might be based on id assigned in html
+* is there an agreed upon place for the js tag in html file?
+* does the typeof operator return anything more specific than just object?
