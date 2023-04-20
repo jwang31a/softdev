@@ -1,6 +1,6 @@
 Team Greatness-Portending Team :: Jun Hong Wang, Gabriel Thompson 
 SoftDev pd8
-K28 -- Getting more comfortable with the dev console and the DOM
+K29 -- Getting more comfortable with the dev console and the DOM
 2023-04-05w
 
 DISCO: 
@@ -12,6 +12,7 @@ DISCO:
 * just typing variable name will return the content of variable
 * typeof will return type of variable
 * the function in addEventListener doesn't appear to take parameters
+* in the elements tab of dev console, if an element associated with an eventlistener is selected, we can see that eventlistener on the side
 
 QCC: 
 * are there preimplemented functions for JS interacting with CSS?

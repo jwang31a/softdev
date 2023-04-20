@@ -1,6 +1,6 @@
-// Team Greatness-Portending Team :: Jun Hong Wang, Gabriel Thompson 
+// Team Greatness-Portending Team :: Jun Hong Wang, Gabriel Thompson
 // SoftDev pd8
-// K28 -- Getting more comfortable with the dev console and the DOM
+// K29 -- Getting more comfortable with the dev console and the DOM
 // 2023-04-05w
 // --------------------------------------------------
 
@@ -178,3 +178,17 @@ fib_18.addEventListener('click', fib18);
 
 var gcd30_160 = document.getElementById("gcd(30,160)");
 gcd30_160.addEventListener('click', gcd_30_160);
+
+//strict equality vs normal equality
+//these are all true, even though they aren't the same type
+//appears that values are typecasted and compared
+console.log(0 == "0");
+console.log(0 == false);
+console.log(0 == []);
+console.log(false == []);
+
+//these are all false, since they aren't of the same type
+console.log(0 === "0");
+console.log(0 === false);
+console.log(0 === []);
+console.log(false === []);
