@@ -32,6 +32,7 @@ var o = { 'name' : 'Thluffy',
 
 //takes a text argument and creates a new item at end of list
 var addItem = function(text) {
+  //id in html
   var list = document.getElementById("thelist");
   var newitem = document.createElement("li");
   newitem.innerHTML = text;
@@ -40,6 +41,7 @@ var addItem = function(text) {
 
 //takes index argument
 var removeItem = function(n) {
+  //gets all elements with this tag, which is an array
   var listitems = document.getElementsByTagName('li');
   listitems[n].remove();
 };
@@ -129,6 +131,7 @@ console.log(gcd(3,9));
 
 //thing to make function call on page load
 var load = function() {
+  //using addItem function predefined
   addItem("5! is " + fact(5));
   addItem("the 6th fib number is " + fib(6));
   addItem("the gcd of 20 and 24 is " + gcd(20,24));
@@ -152,6 +155,7 @@ console.log(bobby(1,1));
 console.log(bobby(5,4));
 */
 //hardcoded functions
+//no arguments because addEventListener doesn't allow functions with arguments?
 var fact6 = function() {
   console.log(fact(6));
   addItem("6! is " + fact(6));
@@ -178,17 +182,3 @@ fib_18.addEventListener('click', fib18);
 
 var gcd30_160 = document.getElementById("gcd(30,160)");
 gcd30_160.addEventListener('click', gcd_30_160);
-
-//strict equality vs normal equality
-//these are all true, even though they aren't the same type
-//appears that values are typecasted and compared
-console.log(0 == "0");
-console.log(0 == false);
-console.log(0 == []);
-console.log(false == []);
-
-//these are all false, since they aren't of the same type
-console.log(0 === "0");
-console.log(0 === false);
-console.log(0 === []);
-console.log(false === []);

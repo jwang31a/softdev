@@ -13,6 +13,8 @@ DISCO:
 * typeof will return type of variable
 * the function in addEventListener doesn't appear to take parameters
 * in the elements tab of dev console, if an element associated with an eventlistener is selected, we can see that eventlistener on the side
+* strict equality (===) compares same type, while (==) does some typecasting? and then compares
+* the functions that deal with html use DOM terminology like element
 
 QCC: 
 * are there preimplemented functions for JS interacting with CSS?
@@ -23,3 +25,5 @@ QCC:
 * does the typeof operator return anything more specific than just object?
 * the variable behavior of functions is clearly visible in addEventListener, since it's just the variable name of the function being inputted as a paramter
 * why can't functions in addEventListener take paramters? is there a syntax that allows it?
+* why are there so many ways to declare functions? which are the most useful/commonly used? which came first?
+* are there specific advantages to declaring functions in each way?
