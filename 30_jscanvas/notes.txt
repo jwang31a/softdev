@@ -1,0 +1,14 @@
+Team Greatness Portending Team :: Jun Hong Wang, Gabriel Thompson
+SoftDev pd8
+K30 -- canvas based JS drawing
+2023-04-25t
+
+DISCO: 
+* the rectangles and circles created from the draw functions aren't actual elements, since they don't show up in the html on the page
+* e.clientX and Y are where the mouse is located relative to the webpage, but e.offsetX and Y are where the mouse is relative to the canvas (or the element the click happened on?)
+* the order of ctx.property or ctx.function() can matter
+* to access the stuff inside the tag, not just style or id, use .innerHTML, this also allows the insides to be changed
+
+QCC: 
+* why aren't the rectangles and circles created elements? are they 
+* fillRect does not appear to work with stroke
