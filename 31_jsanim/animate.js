@@ -16,31 +16,43 @@ var clear = (e) => {
 var radius = 0;
 var growing = true;
 
-var callback = function() {
+var grow = function() {
+    // clear();
     if (growing) {
         radius++;
         ctx.beginPath();
+        ctx.fillStyle = "blue";
         ctx.arc(250,250,radius,0, 2*Math.PI);
+        ctx.fill();
         ctx.stroke();
-    } else if (radius == 250) {
+    } else {
+        radius--;
+        ctx.beginPath();
+        ctx.fillStyle = "blue";
+        ctx.arc(250,250,radius,0, 2*Math.PI);
+        ctx.fill();
+        ctx.stroke();
+    }
+    if (radius >= 250) {
         growing = false;
     } else if (radius == 0) {
         growing = true;
-    } else {
-        radius--;
     }
+    window.cancelAnimationFrame(requestID);
 }
 
 var drawDot = () => {
     console.log("asdf");
-    if (typeof requestID === "none") {
-        requestID = window.requestAnimationFrame(callback);
-    }
+    console.log(typeof requestID);
+    grow();
+    requestID = window.requestAnimationFrame(drawDot);
+    console.log(radius + "radius is" + "and isGrowing" + growing);
 };
 
 var stopIt = function() {
     console.log("stopit");
     console.log(requestID);
+    window.cancelAnimationFrame(requestID);
 };
 
 dotButton.addEventListener("click", drawDot);
