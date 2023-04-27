@@ -1,0 +1,4 @@
+DISCO:
+* there's kind of like a stack of element objects, order of events depends on where the element is
+
+QCC:
