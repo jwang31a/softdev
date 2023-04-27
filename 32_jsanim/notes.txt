@@ -1,0 +1,13 @@
+Jun Hong Wang
+SoftDev pd8
+K32 -- JS bounce
+2023-04-26w
+
+DISCO:
+* functions can be inside functions
+* images are objects in JS
+
+QCC:
+* I left e.preventDefault() commented out because I was getting a TypeError. 
+* e.preventDefault prevents the default behavior, from happening, but what would the default behavior be for a clear function? (or a button?)
+* how are nested functions different from helper functions? is it like nested classes in java, which can access variables from the class around it?
