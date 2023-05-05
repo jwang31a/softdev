@@ -1,5 +1,6 @@
 a = document.getElementById("a");
 data = document.getElementById("data");
+c = document.getElementById("color");
 
 //selectAll() selects all elements that match this, in this case, tag
 //select() selects the first element that matches this description
@@ -17,5 +18,13 @@ var dahta = function() {
   d3.selectAll("p").data(nice).html((d) => d);
 }
 
+var colors = function() {
+  d3.selectAll("p").style("color", function(d,i) {
+    return i % 2 ? "blue" : "red";
+})}
+
+
+
 a.addEventListener("click", dothings);
 data.addEventListener("click", dahta);
+c.addEventListener("click", colors);
