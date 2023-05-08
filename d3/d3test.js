@@ -23,8 +23,6 @@ var colors = function() {
     return i % 2 ? "blue" : "red";
 })}
 
-
-
 a.addEventListener("click", dothings);
 data.addEventListener("click", dahta);
 c.addEventListener("click", colors);

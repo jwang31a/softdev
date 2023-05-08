@@ -5,5 +5,10 @@ data = {"blue" : 3,
     "banana" : 7
 };
 
-const div = d3.create("div")
-    .style("text-align", "right")
+var visualize = function() {
+    const div = d3.create("div")
+        .style("text-align", "right").html("<p>bobby</p>")
+}
+
+v = document.getElementById("visualize");
+v.addEventListener("click", visualize);
