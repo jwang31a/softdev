@@ -1,0 +1,10 @@
+important things to note:
+* the location of the script tag in the html file does matter:
+    * for example, the src="d3" should be before the homemade .js file if the .js file uses d3
+    * also, although the script tag can exist anywhere, if the .js file interacts with elements, it's best to have it at the end so all elements can load first
+* d3 data visualizations will mainly interact with svg
+* output of d3.select() cannot have eventlistener attached, so just use getelementbyid() in this case
+* I haven't figured out how to make d3 specifically interact with one svg, so we might have to delete the svg and create a new one every time we want to display new data
+    * not the best solution, but it works
+    * if we need to compare graphs, then we need new solution
+* with d3, all we're doing is making shapes easier pretty much (like working with a canvas)
