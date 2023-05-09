@@ -44,7 +44,7 @@ var visualize = function() {
     //variables to have while graphing
     var width = 250;
     var scale = 50;
-    var barHeight = 25;
+    var barHeight = 50;
 
     //selects the body, creates an svg with certain width and height dependent on array length
     var graph = d3.select("body")
