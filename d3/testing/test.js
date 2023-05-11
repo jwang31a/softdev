@@ -44,7 +44,7 @@ var visualize = function() {
     //variables to have while graphing
     var width = 250;
     var scale = 50;
-    var barHeight = 25;
+    var barHeight = 50;
 
     //selects the body, creates an svg with certain width and height dependent on array length
     var graph = d3.select("body")
@@ -52,6 +52,11 @@ var visualize = function() {
         .attr("width", width)
         .attr("height", barHeight * data.length);
     //creates groups, enters data into them
+    
+    var xScale = d3.scaleBand()
+        .range([0, width]), 
+        yScale = d3.scaleLinear().range([height, 0]);
+
     //each new group will be transformed down based on which element of the array it is, using i
     var bar = graph.selectAll("g")
         .data(data)
