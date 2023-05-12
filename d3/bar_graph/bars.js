@@ -57,10 +57,37 @@ var barry = function() {
         .enter()
         .append("rect")
         .attr("class", "bar")
+        .on("mouseover", onMouseOver)
+        .on("mouseout", onMouseOut)
         .attr("x", function(i) {return xScale(i);})
         .attr("y", function(d) {return yScale(d);})
         .attr("width", xScale.bandwidth())
         .attr("height", function(d) {return height - yScale(d) ;});
+}
+
+var onMouseOver = function(d, i) {
+    console.log(i);
+    d3.select(this)
+        .attr("class", "highlight");
+    d3.select(this)
+        .transition()
+        .duration(400)
+        .attr("height", function(d) {
+            return yScale(i) + 10;
+        });
+}
+
+var onMouseOver = function(d, i) {
+    console.log(i);
+    d3.select(this)
+        .attr("class", "bar");
+    d3.select(this)
+        .transition()
+        .duration(400)
+        .attr("height", function(d) {
+            return yScale(i) + 10;
+        });
+        
 }
 
 barsButton.addEventListener("click", barry);
