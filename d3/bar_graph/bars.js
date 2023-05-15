@@ -41,7 +41,7 @@ var barry = function() {
         return d;
     })])
 
-    console.log(xScale);
+    //console.log(xScale.toString(), yScale);
 
     g.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -57,8 +57,24 @@ var barry = function() {
         .enter()
         .append("rect")
         .attr("class", "bar")
-        .on("mouseover", onMouseOver)
-        .on("mouseout", onMouseOut)
+        .on("mouseover", function(d, i) {
+            console.log(d, i);
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("class", "highlight");
+            d3.select(this)
+                .transition()
+                .duration(400)
+                .attr("width", xScale.bandwidth() + 5)
+                .attr("y", function(d) {return y(d) - 10;});
+                /*
+                .attr("height", function(d) {
+                    return yScale(d) + 10;
+                });
+                */
+        })
+        //.on("mouseout", onMouseOut)
         .attr("x", function(i) {return xScale(i);})
         .attr("y", function(d) {return yScale(d);})
         .attr("width", xScale.bandwidth())
@@ -66,28 +82,38 @@ var barry = function() {
 }
 
 var onMouseOver = function(d, i) {
-    console.log(i);
+    console.log("test");
+    
     d3.select(this)
+        .transition()
+        .duration(200)
         .attr("class", "highlight");
     d3.select(this)
         .transition()
         .duration(400)
+        .attr("width", xScale.bandwidth() + 5)
+        .attr("y", function(d) {return y(d.value) - 10;});
+    console.log(d.value);
+        /*
         .attr("height", function(d) {
-            return yScale(i) + 10;
+            return yScale(d) + 10;
         });
+        */
 }
 
+/*
 var onMouseOver = function(d, i) {
-    console.log(i);
+    //console.log(i);
     d3.select(this)
         .attr("class", "bar");
     d3.select(this)
         .transition()
         .duration(400)
         .attr("height", function(d) {
-            return yScale(i) + 10;
-        });
-        
+            //return yScale(d) + 10;
+            return y(d.value);
+        });  
 }
+*/
 
 barsButton.addEventListener("click", barry);
