@@ -2,3 +2,4 @@
 <p>ayo did this work</p>
 <p>sending data in plaintext lmao</p>
 <p>although this could have been done inside a json file</p>
+<button type="button" onclick="unloadDoc()">reverse the changes</button>

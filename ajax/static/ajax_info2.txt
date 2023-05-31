@@ -1,0 +1,2 @@
+<h1>ajax change text ooh ooh ah ah</h1>
+<button type="button" onclick="loadDoc()">change text</button>
