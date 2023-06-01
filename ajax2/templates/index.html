@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>ajax window cleaner</title>
     </head>
     <body>
         <div id="pain">
-            <form action="" method="POST">
-                <input type="text" name="user" id="user"><br>
-                <input type="hidden" name="hidden" id="hidden">
+            <form action="/ajax" method="POST">
+                <input type="text" name="username" id="username">
+                <input type="text" name="password" id="password">
                 <input type="button" value="Submit" onclick="loadXMLDoc()">
             </form>
         </div>
-        <script src="static/js/ajax.js"></script>
     </body>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="static/ajax.js"></script>
 </html>

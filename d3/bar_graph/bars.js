@@ -58,7 +58,7 @@ var barry = function() {
         .append("rect")
         .attr("class", "bar")
         .on("mouseover", function(d, i) {
-            console.log("test");
+            //console.log("test");
             
             d3.select(this)
                 .transition()
@@ -74,10 +74,17 @@ var barry = function() {
             d3.select(this)
                 .transition()
                 .duration(400)
-                .attr("width", xScale.bandwidth());
+                .attr("width", xScale.bandwidth())
+                //.attr("y", function(d) {return x(d) - 2.5;})
         })
-        .attr("x", function(i) {return xScale(i);})
-        .attr("y", function(d) {return yScale(d);})
+        .attr("x", function(i) {
+            console.log(i);
+            return xScale(i);
+        })
+        .attr("y", function(d) {
+            console.log(d);
+            return yScale(d);
+        })
         .attr("width", xScale.bandwidth())
         .attr("height", function(d) {return height - yScale(d) ;});
 }
