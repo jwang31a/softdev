@@ -5,7 +5,7 @@
     </head>
     <body>
         <p>choose a thing</p>
-        <form action="/ajax", method="POST">
+        <form action="", method="POST">
             <select name="things" onchange="showThing(this.value)">
                 <option value="">Select</option>
                 <option value="apple">apple</option>
@@ -15,7 +15,7 @@
             </select>
             <input type="submit" value="Submit">
         </form>
-        <div id="info">{{ table }}</div>
+        <div id="info"></div>
     </body>
     <script>
         var showThing = function(str) {
@@ -23,7 +23,6 @@
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("info").innerHTML = this.responseText;
-                    console.log(this.responseText);
                 }
             };
             xhttp.open("GET", "/", true);

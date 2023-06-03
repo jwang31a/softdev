@@ -5,26 +5,19 @@ app = Flask(__name__)
 
 db = sqlite3.connect("sample.db", check_same_thread=False)
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
-    table = """
-        <table>
-
-        </table>
-    """
-    return render_template("index.html", table = table)
-
-@app.route("/ajax", methods=["POST"])
-def ajaxStuff():
-    db = sqlite3.connect("sample.db", check_same_thread=False)
-    c = db.cursor()
-    c.execute("SELECT * FROM sample;")
-    #c.execute("SELECT fruit, amount FROM sample WHERE fruit = ?;")
-    data = c.fetchall()
-    db.close()
-    current = request.form.get("things")
-    print(current)
-    return jsonify(data)
+    #this route has two functions: one is to render the page, the other is to respond to the ajax request
+    if request.method == "POST":
+        current = request.form.get("things")
+        db = sqlite3.connect("sample.db", check_same_thread=False)
+        c = db.cursor()
+        c.execute("SELECT fruit, amount FROM sample WHERE fruit = ?;", (current,))
+        data = c.fetchall()
+        print(data)
+        db.close()
+        return jsonify({"fruit": data[0][0], "amount": data[0][1]}) 
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.debug = True
