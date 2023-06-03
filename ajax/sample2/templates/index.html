@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sample2</title>
+    </head>
+    <body>
+        <p>choose a thing</p>
+        <form action="/ajax", method="POST">
+            <select name="things" onchange="showThing(this.value)">
+                <option value="">Select</option>
+                <option value="apple">apple</option>
+                <option value="banana">banana</option>
+                <option value="orange">orange</option>
+                <option value="grape">grape</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="info">{{ table }}</div>
+    </body>
+    <script>
+        var showThing = function(str) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("info").innerHTML = this.responseText;
+                    console.log(this.responseText);
+                }
+            };
+            xhttp.open("GET", "/", true);
+            xhttp.send();
+        }
+    </script>
+</html>
