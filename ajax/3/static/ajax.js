@@ -21,6 +21,5 @@ function loadXMLDoc() {
     var u = document.getElementById("username").value;
     var p = document.getElementById("password").value;
     var postVars = "username=" + u + "&password=" + p;
-    console.log(postVars);
     req.send(postVars);
 }
