@@ -20,7 +20,7 @@ def ajax():
     db.close()
     if raw:
         data = raw[0][0] + " " + str(raw[0][1])
-        return jsonify(data=data)
+        return jsonify(value=data)
     return jsonify({"error": "you stupid"})
 
 if __name__ == "__main__":
